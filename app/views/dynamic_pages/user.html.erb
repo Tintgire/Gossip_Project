@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Accueil</a>
+    <a class="navbar-brand" href="../static_pages/team">Team</a>
+    <a class="navbar-brand" href="../static_pages/contact">Contact</a>
+  </div>
+</nav>
+
+<h1>Auteur</h1>
+<%id = params[:id]%>
+<%user = User.find(id.to_i)%>
+<p>Prenom :</p>
+<%=user.first_name%>
+<br><br><br>
+<p>Nom :</p>
+<%=user.last_name%>
+<br><br><br>
+<p>Age :</p>
+<%=user.age%>
+<br><br><br>
+<p>Email :</p>
+<%=user.email%>
+<br><br><br>
+<p>Description :</p>
+<%=user.description%>

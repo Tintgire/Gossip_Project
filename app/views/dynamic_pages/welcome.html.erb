@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="/">Accueil</a>
+    <a class="navbar-brand" href="static_pages/team">Team</a>
+    <a class="navbar-brand" href="static_pages/contact">Contact</a>
+  </div>
+</nav>
+<h1>Bonjour et Bienvenue !!</h1>
+<p>Tu as devant toi les gossips les plus chaud de ta region</p>
+
+<ul>
+	<%Gossip.all.each do |i|%>
+		<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text"><a href="gossip/<%=i.id%>"><li><%=i.user.first_name%> :<br><%=i.title%></li></a></p>
+  </div>
+</div>
+	<%end%>
+</ul>
